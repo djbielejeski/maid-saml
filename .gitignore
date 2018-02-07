@@ -3,7 +3,6 @@
 ################################################################################
 
 /.vs
-/packages
 /webapi-saml-shared/bin/Debug
 /webapi-saml-shared/obj/Debug
 /webapi-saml-test/.vs
