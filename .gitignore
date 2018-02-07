@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/packages
+/webapi-saml-shared/bin/Debug
+/webapi-saml-shared/obj/Debug
+/webapi-saml-test/.vs
+/webapi-saml-test/bin
+/webapi-saml-test/obj/Debug
+/webapi-saml-test-client/bin
+/webapi-saml-test-client/obj/Debug

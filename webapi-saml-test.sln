@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi-saml-test-provider", "webapi-saml-test\webapi-saml-test-provider.csproj", "{78AF8873-CB07-41EE-8FD7-A41EA11EB249}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi-saml-test-client", "webapi-saml-test-client\webapi-saml-test-client.csproj", "{72E53CAD-F5AE-44C1-96B3-FE59894114AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi-saml-shared", "webapi-saml-shared\webapi-saml-shared.csproj", "{78EC4AC2-4BF8-4865-B3CA-F0527ABFC69B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78AF8873-CB07-41EE-8FD7-A41EA11EB249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78AF8873-CB07-41EE-8FD7-A41EA11EB249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78AF8873-CB07-41EE-8FD7-A41EA11EB249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78AF8873-CB07-41EE-8FD7-A41EA11EB249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E53CAD-F5AE-44C1-96B3-FE59894114AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E53CAD-F5AE-44C1-96B3-FE59894114AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E53CAD-F5AE-44C1-96B3-FE59894114AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E53CAD-F5AE-44C1-96B3-FE59894114AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78EC4AC2-4BF8-4865-B3CA-F0527ABFC69B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78EC4AC2-4BF8-4865-B3CA-F0527ABFC69B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78EC4AC2-4BF8-4865-B3CA-F0527ABFC69B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78EC4AC2-4BF8-4865-B3CA-F0527ABFC69B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6EA9562-252A-469F-A213-BBDEDDF6C734}
+	EndGlobalSection
+EndGlobal

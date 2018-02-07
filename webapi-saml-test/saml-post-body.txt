@@ -1,0 +1,52 @@
+Encrypted Saml payload
+-----
+"PFJlc3BvbnNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOmRzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjIiB4bWxuczpzYW1sPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIiBWZXJzaW9uPSIyLjAiIElzc3VlSW5zdGFudD0iMjAxOC0wMi0wNlQyMzowMTowMi4yMzEwNTY0WiIgRGVzdGluYXRpb249IlJlY2lwaWVudCIgeG1sbnM9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpwcm90b2NvbCI+PHNhbWw6SXNzdWVyPm1haWQuY29tPC9zYW1sOklzc3Vlcj48U3RhdHVzPjxTdGF0dXNDb2RlIFZhbHVlPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6c3RhdHVzOlN1Y2Nlc3MiIC8+PC9TdGF0dXM+PHNhbWw6QXNzZXJ0aW9uIFZlcnNpb249IjIuMCIgSUQ9Il8zOGY3NmRjNS0xMDViLTQ3NDctOGFjMS00NjY2Y2Y5ZjY0YTUiIElzc3VlSW5zdGFudD0iMjAxOC0wMi0wNlQyMzowMTowMi4yMzI1NjA3WiI+PHNhbWw6SXNzdWVyPm1haWQuY29tPC9zYW1sOklzc3Vlcj48c2FtbDpTdWJqZWN0PjxzYW1sOk5hbWVJRCBGb3JtYXQ9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjEuMTpuYW1laWQtZm9ybWF0OnVuc3BlY2lmaWVkIj48L3NhbWw6TmFtZUlEPjxzYW1sOlN1YmplY3RDb25maXJtYXRpb24gTWV0aG9kPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6Y206YmVhcmVyIj48c2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uRGF0YSBSZWNpcGllbnQ9IlJlY2lwaWVudCIgTm90T25PckFmdGVyPSIyMDE4LTAyLTA3VDAwOjAxOjAyLjIzMjU2MDdaIiAvPjwvc2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uPjwvc2FtbDpTdWJqZWN0PjxzYW1sOkNvbmRpdGlvbnMgTm90QmVmb3JlPSIyMDE4LTAyLTA2VDIzOjAxOjAyLjIzMzA2MDlaIiBOb3RPbk9yQWZ0ZXI9IjIwMTgtMDItMDdUMDA6MDE6MDIuMjMzMDYwOVoiPjxzYW1sOkF1ZGllbmNlUmVzdHJpY3Rpb24+PHNhbWw6QXVkaWVuY2U+QXVkaWVuY2U8L3NhbWw6QXVkaWVuY2U+PC9zYW1sOkF1ZGllbmNlUmVzdHJpY3Rpb24+PC9zYW1sOkNvbmRpdGlvbnM+PHNhbWw6QXV0aG5TdGF0ZW1lbnQgQXV0aG5JbnN0YW50PSIyMDE4LTAyLTA2VDIzOjAxOjAyLjIzMzU2MjVaIiBTZXNzaW9uSW5kZXg9Il8zOGY3NmRjNS0xMDViLTQ3NDctOGFjMS00NjY2Y2Y5ZjY0YTUiPjxzYW1sOkF1dGhuQ29udGV4dD48c2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj51cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YWM6Y2xhc3Nlczp1bnNwZWNpZmllZDwvc2FtbDpBdXRobkNvbnRleHRDbGFzc1JlZj48L3NhbWw6QXV0aG5Db250ZXh0Pjwvc2FtbDpBdXRoblN0YXRlbWVudD48c2FtbDpBdHRyaWJ1dGVTdGF0ZW1lbnQ+PHNhbWw6QXR0cmlidXRlIE5hbWU9IlVzZXJJZCIgTmFtZUZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmF0dHJuYW1lLWZvcm1hdDpiYXNpYyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgeHNpOnR5cGU9InhzZDpzdHJpbmciPjEyMzQ1Njwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0cmlidXRlPjwvc2FtbDpBdHRyaWJ1dGVTdGF0ZW1lbnQ+PC9zYW1sOkFzc2VydGlvbj48U2lnbmF0dXJlIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjIj48U2lnbmVkSW5mbz48Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIgLz48U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI3JzYS1zaGExIiAvPjxSZWZlcmVuY2UgVVJJPSIjXzM4Zjc2ZGM1LTEwNWItNDc0Ny04YWMxLTQ2NjZjZjlmNjRhNSI+PFRyYW5zZm9ybXM+PFRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyNlbnZlbG9wZWQtc2lnbmF0dXJlIiAvPjxUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzEwL3htbC1leGMtYzE0biMiIC8+PC9UcmFuc2Zvcm1zPjxEaWdlc3RNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjc2hhMSIgLz48RGlnZXN0VmFsdWU+Z2V3UTkxSXMxS0dINUowbGhiS1ZoQ1B0dzhrPTwvRGlnZXN0VmFsdWU+PC9SZWZlcmVuY2U+PC9TaWduZWRJbmZvPjxTaWduYXR1cmVWYWx1ZT5tREpEQzFPTWZldmRYU28yMWtGU1BTdCtiRnFMN3I1T1hMaUtKVGJTY05odnBnbjdNWFVKRWgzKzlxaVFmczFTTXBGQTh2dmtHTzArVHBLcGpIbkpTME9YRXFqbTVpMmpYUlNOWVFTNDJqS0VuOWVpRjNTVzUvbFZLMEZtSUxXQTBaN01PTDc1SkZZdXRlaDdQZGc5MVFRbWFoZkllMEc1NldvVzdOTTlnZzBFTGlqSTFzd2ExeXpKRkZSV2RNeVVYNWp0djRIWFRNQUJmNjdzTS9Ubml6NmRZb2lKN3V3bnZ3WS9xSHdyRkJObEE1RXB4Qm52RXdxMy9TcXhoTWp6M2lKclpYc1FhblVud0k5a1dyRU5nZHVnYy9YNmtwQWdvblVld2ZMcERHamRlZnM0Z3E2RGZrbnd0Y1hvcG9QVUNCVjV3YmtOOHJDRFZSSGJYUUhGVTM0elV5aVlOUnN1U1hpS1dLZE9LWU9wWEw1ZTdDNFpFaStSSUFjbVFycm1DU3lMZ0U0aVVZRXhPYjNOQk9JSGF5b05pdk9GTlZOaWdQNjMxZGpDTHdFMkxmckozM05oVVJpNDVjdWFQTWlPMU1MbXluY1pQaWRtM0lRQmRHbzAxMXVBZFF0RlVDdVAyVWs3Ymt3S1EvNWorQUdja2I0cVY4SkQvVS9BMFZqT0xzZ1V4S2VYZDBaSUtLczZ6M01tZ1RZUnJRWlNTdUw4VEtORzluTGxBbXpQc0lYNnY4VDlBVzRDUUoyK0JIRFpiRXV4K0RMWENOaWlORVJ5UFN3YlNuWTArdURjd0lDVU1MdVozTmFDWjNGUFpvSzdUeExQZ0ZreGxRb1AwY3pNTVFLdy81cXVwMnVZY1dmbzVOdWFPUmxDblc5dmpIM05SdUduK25ua0dHQT08L1NpZ25hdHVyZVZhbHVlPjwvU2lnbmF0dXJlPjwvUmVzcG9uc2U+"
+
+Decrypted Saml payload
+-----
+<?xml version="1.0"?>
+<Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns="urn:oasis:names:tc:SAML:2.0:protocol" Version="2.0" IssueInstant="2018-02-06T23:01:02.2310564Z" Destination="Recipient">
+<saml:Issuer>maid.com</saml:Issuer>
+<Status>
+    <StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/>
+</Status>
+<saml:Assertion Version="2.0" ID="_38f76dc5-105b-4747-8ac1-4666cf9f64a5" IssueInstant="2018-02-06T23:01:02.2325607Z">
+    <saml:Issuer>maid.com</saml:Issuer>
+    <saml:Subject>
+        <saml:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"/>
+        <saml:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+            <saml:SubjectConfirmationData Recipient="Recipient" NotOnOrAfter="2018-02-07T00:01:02.2325607Z"/>
+        </saml:SubjectConfirmation>
+    </saml:Subject>
+    <saml:Conditions NotBefore="2018-02-06T23:01:02.2330609Z" NotOnOrAfter="2018-02-07T00:01:02.2330609Z">
+        <saml:AudienceRestriction>
+            <saml:Audience>Audience</saml:Audience>
+        </saml:AudienceRestriction>
+    </saml:Conditions>
+    <saml:AuthnStatement AuthnInstant="2018-02-06T23:01:02.2335625Z" SessionIndex="_38f76dc5-105b-4747-8ac1-4666cf9f64a5">
+        <saml:AuthnContext>
+            <saml:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified</saml:AuthnContextClassRef>
+        </saml:AuthnContext>
+    </saml:AuthnStatement>
+    <saml:AttributeStatement>
+        <saml:Attribute Name="UserId" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <saml:AttributeValue xsi:type="xsd:string">123456</saml:AttributeValue>
+        </saml:Attribute>
+    </saml:AttributeStatement>
+</saml:Assertion>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+    <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+    <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+    <Reference URI="#_38f76dc5-105b-4747-8ac1-4666cf9f64a5">
+        <Transforms>
+            <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+            <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+        <DigestValue>gewQ91Is1KGH5J0lhbKVhCPtw8k=</DigestValue>
+    </Reference>
+</SignedInfo>
+<SignatureValue>mDJDC1OMfevdXSo21kFSPSt+bFqL7r5OXLiKJTbScNhvpgn7MXUJEh3+9qiQfs1SMpFA8vvkGO0+TpKpjHnJS0OXEqjm5i2jXRSNYQS42jKEn9eiF3SW5/lVK0FmILWA0Z7MOL75JFYuteh7Pdg91QQmahfIe0G56WoW7NM9gg0ELijI1swa1yzJFFRWdMyUX5jtv4HXTMABf67sM/Tniz6dYoiJ7uwnvwY/qHwrFBNlA5EpxBnvEwq3/SqxhMjz3iJrZXsQanUnwI9kWrENgdugc/X6kpAgonUewfLpDGjdefs4gq6DfknwtcXopoPUCBV5wbkN8rCDVRHbXQHFU34zUyiYNRsuSXiKWKdOKYOpXL5e7C4ZEi+RIAcmQrrmCSyLgE4iUYExOb3NBOIHayoNivOFNVNigP631djCLwE2LfrJ33NhURi45cuaPMiO1MLmyncZPidm3IQBdGo011uAdQtFUCuP2Uk7bkwKQ/5j+AGckb4qV8JD/U/A0VjOLsgUxKeXd0ZIKKs6z3MmgTYRrQZSSuL8TKNG9nLlAmzPsIX6v8T9AW4CQJ2+BHDZbEux+DLXCNiiNERyPSwbSnY0+uDcwICUMLuZ3NaCZ3FPZoK7TxLPgFkxlQoP0czMMQKw/5qup2uYcWfo5NuaORlCnW9vjH3NRuGn+nnkGGA=</SignatureValue>
+</Signature>
+</Response>

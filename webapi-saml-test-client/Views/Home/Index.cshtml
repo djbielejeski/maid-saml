@@ -1,0 +1,58 @@
+﻿@using webapi_saml_test_client.Models
+@using System.Xml.Linq;
+@model GeneratedSamlModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+@using (Html.BeginForm("Index", "Home", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="form-group">
+        <div class="col-md-2 control-label">
+            UserId
+        </div>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@ViewBag.userId" name="UserId" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button class="btn btn-default" type="submit">Submit</button>
+        </div>
+    </div>
+}
+
+<h1>Decrypted Saml</h1>
+<pre>
+<code>
+@XDocument.Parse(@Model.DecryptedSaml).ToString())
+</code>
+</pre>
+
+<h1>Encoded Saml</h1>
+<pre>
+<code>
+"@Model.EncryptedSaml"
+</code>
+</pre>
+
+<h1>Post Example with the Encoded Saml</h1>
+<pre>
+Route: http://{host}/api/v1/auth
+Type: POST
+Content-Type: application/json
+Body: {Encoded Saml}
+</pre>
+
+<h2>Example Response from Post (JsonWebToken)</h2>
+<pre>
+"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJVc2VyRGF0YSI6eyJVc2VySWQiOiIxMjM0NTYiLCJVc2VyVHlwZSI6MCwiSXNzdWVkRGF0ZSI6IjIwMTgtMDItMDdUMDA6NDk6MzYuNTg1NjI2NVoiLCJFeHBpcmF0aW9uRGF0ZSI6IjIwMTgtMDItMDdUMDE6NDk6MzYuNTg1NjI2NVoifSwiZXhwIjoxNTE3OTY4NDQ2LjB9.BvjBpP8GI18HQHyWE6MhPopQu9j2M_F2N4EmrH2mtso"
+</pre>
+
+<h2>Add that token to all subsequent calls to the api</h2>
+<pre>
+Route: http://{host}/api/values
+Type: GET
+Content-Type: application/json
+Headers["x-auth-token"]: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJVc2VyRGF0YSI6eyJVc2VySWQiOiIxMjM0NTYiLCJVc2VyVHlwZSI6MCwiSXNzdWVkRGF0ZSI6IjIwMTgtMDItMDdUMDA6NDk6MzYuNTg1NjI2NVoiLCJFeHBpcmF0aW9uRGF0ZSI6IjIwMTgtMDItMDdUMDE6NDk6MzYuNTg1NjI2NVoifSwiZXhwIjoxNTE3OTY4NDQ2LjB9.BvjBpP8GI18HQHyWE6MhPopQu9j2M_F2N4EmrH2mtso"
+</pre>
