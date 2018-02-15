@@ -1,70 +1,50 @@
-﻿using JWT;
-using JWT.Algorithms;
-using JWT.Serializers;
+﻿using Microsoft.IdentityModel.Tokens;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Web;
-using webapi_saml_test_shared.Models;
+using System.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Security.Cryptography.X509Certificates;
 
 namespace webapi_saml_test_shared.Utilities
 {
     public static class JsonWebTokenUtility
     {
-        //https://github.com/jwt-dotnet/jwt 
-
-        private const string key = "UserData";
-
-        public static string CreateToken(UserData userData)
+        public static string CreateToken(string emailAddress, X509Certificate2 cert)
         {
-            IDateTimeProvider provider = new UtcDateTimeProvider();
-            var expirationDate = provider.GetNow().AddSeconds((userData.ExpirationDate - userData.IssuedDate).TotalSeconds);
-
-            var unixEpoch = JwtValidator.UnixEpoch; // 1970-01-01 00:00:00 UTC
-            var secondsSinceEpoch = Math.Round((expirationDate - unixEpoch).TotalSeconds);
-
-            var payload = new Dictionary<string, object>
+            Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor tokenDescriptor = new Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor
             {
-                { key, userData },
-                { "exp", secondsSinceEpoch }
+                Subject = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Email, emailAddress) }),
+                Audience = "maid",
+                Issuer = "maid",
+                Expires = DateTime.UtcNow.AddHours(Convert.ToInt32(ConfigurationManager.AppSettings["tokenLengthInHours"])),
+                SigningCredentials = new Microsoft.IdentityModel.Tokens.SigningCredentials(new X509SecurityKey(cert), Microsoft.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256Signature)
             };
 
-            IJwtAlgorithm algorithm = new HMACSHA256Algorithm();
-            IJsonSerializer serializer = new JsonNetSerializer();
-            IBase64UrlEncoder urlEncoder = new JwtBase64UrlEncoder();
-            IJwtEncoder encoder = new JwtEncoder(algorithm, serializer, urlEncoder);
-            return encoder.Encode(payload, ConfigurationManager.AppSettings["jwtSecret"]);
+            JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+            Microsoft.IdentityModel.Tokens.SecurityToken token = tokenHandler.CreateToken(tokenDescriptor);
+            string tokenString = tokenHandler.WriteToken(token);
+
+            return tokenString;
         }
 
-        public static UserData DecodeToken(string token)
+        public static ClaimsPrincipal DecodeToken(string token, X509Certificate2 cert)
         {
-            try
+            var validationParameters = new TokenValidationParameters()
             {
-                IJsonSerializer serializer = new JsonNetSerializer();
-                IDateTimeProvider provider = new UtcDateTimeProvider();
-                IJwtValidator validator = new JwtValidator(serializer, provider);
-                IBase64UrlEncoder urlEncoder = new JwtBase64UrlEncoder();
-                IJwtDecoder decoder = new JwtDecoder(serializer, validator, urlEncoder);
+                IssuerSigningKey = new X509SecurityKey(cert),
+                RequireSignedTokens = true,
+                RequireExpirationTime = true,
+                ValidIssuer = "maid",
+                ValidAudience = "maid"
+            };
 
-                IDictionary<string, object> payload = decoder.DecodeToObject(token, ConfigurationManager.AppSettings["jwtSecret"], verify: true);
-                UserData userData = Newtonsoft.Json.JsonConvert.DeserializeObject<UserData>(payload[key].ToString());
-                return userData;
-            }
-            catch (TokenExpiredException)
-            {
-                Console.WriteLine("Token has expired");
-            }
-            catch (SignatureVerificationException)
-            {
-                Console.WriteLine("Token has invalid signature");
-            }
-            catch
-            {
-                // No op
-            }
+            Microsoft.IdentityModel.Tokens.SecurityToken validatedToken;
 
-            return null;
+            JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+            ClaimsPrincipal claimsPrincipal = tokenHandler.ValidateToken(token, validationParameters, out validatedToken);
+
+            return claimsPrincipal;
         }
     }
 }

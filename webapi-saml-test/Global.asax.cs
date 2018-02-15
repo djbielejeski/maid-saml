@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Security.Claims;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using webapi_saml_test.Utilities;
 using webapi_saml_test_provider.Filters;
-using webapi_saml_test_provider.Models;
-using webapi_saml_test_shared.Models;
 using webapi_saml_test_shared.Utilities;
 
 namespace webapi_saml_test_provider
@@ -33,7 +34,7 @@ namespace webapi_saml_test_provider
                 return;
             }
 
-            UserData userDataFromToken = null;
+            ClaimsPrincipal userPrinciple = null;
             try
             {
                 // See if they have the JsonWebToken header
@@ -42,7 +43,7 @@ namespace webapi_saml_test_provider
                 if (!string.IsNullOrEmpty(token))
                 {
                     // parse the token and setup the principle context
-                    userDataFromToken = JsonWebTokenUtility.DecodeToken(token);
+                    userPrinciple = JsonWebTokenUtility.DecodeToken(token, CertificateHelper.GetCertificate());
                 }
             }
             catch
@@ -50,18 +51,20 @@ namespace webapi_saml_test_provider
                 // Noop
             }
 
-            if (userDataFromToken == null)
+            if (userPrinciple == null)
             {
                 return;
             }
             else
             {
-                Thread.CurrentPrincipal = new UserPrincipal(userDataFromToken);
+                Thread.CurrentPrincipal = userPrinciple;
                 if (HttpContext.Current != null)
                 {
                     HttpContext.Current.User = Thread.CurrentPrincipal;
                 }
             }
         }
+
+        
     }
 }
