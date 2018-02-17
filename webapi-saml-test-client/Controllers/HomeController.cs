@@ -22,6 +22,55 @@ namespace webapi_saml_test_client.Controllers
     {
         public async Task<ActionResult> Index(string emailAddress = "david@gmail.com")
         {
+            var model = await GetModel(emailAddress);
+            ViewBag.emailAddress = emailAddress;
+            return View(model);
+        }
+
+        public ActionResult LoginLoop()
+        {
+            return Redirect(ConfigurationManager.AppSettings["osaUrl"] + "?returnUrl=" + Request.Url.AbsoluteUri.Replace(Request.Url.AbsolutePath, "") + "/Home/AcceptLogin");
+        }
+
+        public async Task<ActionResult> AcceptLogin(string token)
+        {
+            // Get the email address from the token
+            var claims = ReadTokenWithClientCertificate(token);
+            var emailAddress = claims.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Email).Value;
+
+            var model = await GetModel(emailAddress);
+            ViewBag.TokenFromOSA = token;
+            ViewBag.emailAddress = emailAddress;
+            return View("Index", model);
+        }
+
+        public async Task<ActionResult> GetDataFromOSA(string token = "")
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(ConfigurationManager.AppSettings["osaUrl"]);
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Add(ConfigurationManager.AppSettings["header-token-name"], token);
+
+            string responseData = string.Empty;
+            HttpResponseMessage response = await client.GetAsync("/api/values");
+            responseData = await response.Content.ReadAsStringAsync();
+
+            ViewBag.DataFromOSA = responseData;
+
+            // Setup the rest of the data
+            if (!string.IsNullOrEmpty(token))
+            {
+                var claims = ReadTokenWithClientCertificate(token);
+                var emailAddress = claims.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Email).Value;
+                ViewBag.TokenFromOSA = token;
+                ViewBag.emailAddress = emailAddress;
+            }
+            return View("Index");
+        }
+
+        private async Task<GeneratedJWTModel> GetModel(string emailAddress)
+        {
             GeneratedJWTModel model = new GeneratedJWTModel();
 
             HttpClient client = new HttpClient();
@@ -43,8 +92,7 @@ namespace webapi_saml_test_client.Controllers
             // Attempt to decrypt the token with our client cert
             model.principle = ReadTokenWithClientCertificate(tokenFromProvider);
 
-            ViewBag.emailAddress = emailAddress;
-            return View(model);
+            return model;
         }
 
         private ClaimsPrincipal ReadTokenWithClientCertificate(string token)
